@@ -48,19 +48,19 @@ export default function Navbar() {
           <li className="hover:text-blue-800 active text-lg">
             <a href="/">Home</a>
           </li>
-          <li className="hover:text-blue-800">
+          <li className="hover:text-blue-800 text-lg">
             <a href="/">Rooms</a>
           </li>
-          <li>
+          <li className="hover:text-blue-800 text-lg">
             <a href="/">About</a>
           </li>
-          <li>
+          <li className="hover:text-blue-800 text-lg">
             <a href="/">Blog</a>
           </li>
-          <li>
+          <li className="hover:text-blue-800 text-lg">
             <a href="/">Contact</a>
           </li>
-          <li>
+          <li className="hover:text-blue-800 text-lg">
             <a href="/">Login</a>
           </li>
         </ul>
