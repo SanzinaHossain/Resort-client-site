@@ -1,33 +1,50 @@
+import { roomCardStyle } from "./Styles"
+
+//  button details function contains button function and cost of room
+
+function RoomButtonDetails({ room }) {
+  return (
+    <div className={roomCardStyle.roomButtonDetailsContainer}>
+      <p className={roomCardStyle.roomButtonDetailsText}>
+        {room.cost}/
+        <sub className={roomCardStyle.roomButtonDetailsSubText}>Night</sub>
+      </p>
+      <button className={roomCardStyle.buttonStyle}>View Details...</button>
+    </div>
+  )
+}
+
+// RoomDetails function contains guest, bed and bath number value
+
+function RoomDetails({ room }) {
+  return (
+    <div className={roomCardStyle.roomDetailsContainer}>
+      {room.facilities.map((facility) => {
+        const IconComponent = facility.icon
+        return (
+          <p className={roomCardStyle.roomDetailsText}>
+            <IconComponent className={roomCardStyle.roomDetailsIcon} />
+            {facility.title}
+          </p>
+        )
+      })}
+    </div>
+  )
+}
+
+// .................Main Function...........
+
 export default function SectionRoomCard({ room }) {
   return (
-    <div key={room.id} className=" bg-white shadow-xl ">
+    <div key={room.id} className={roomCardStyle.cardSingleContainer}>
       <figure>
-        <img src={room.image} alt="Shoes" />
+        <img src={room.image} />
       </figure>
-      <div className="card-body bg-white text-black text-justify">
-        <h2 className="card-title text-2xl text-primary font-bold">
-          {room.title}
-        </h2>
+      <div className={roomCardStyle.cardDetailsContainer}>
+        <h2 className={roomCardStyle.cardTitle}>{room.title}</h2>
         <p>{room.description}</p>
-        <div className="flex items-center my-2">
-          {room.facilities.map((facility) => {
-            const IconComponent = facility.icon
-            return (
-              <p className="flex gap-x-2  items-center">
-                <IconComponent className="text-primary  " />
-                {facility.title}
-              </p>
-            )
-          })}
-        </div>
-        <div className="card-actions justify-end mt-2">
-          <p className="text-2xl">
-            {room.cost}/<sub className="text-primary font-bold">Night</sub>
-          </p>
-          <button className="border-2 border-primary p-2">
-            View Details...
-          </button>
-        </div>
+        <RoomDetails room={room} />
+        <RoomButtonDetails room={room} />
       </div>
     </div>
   )

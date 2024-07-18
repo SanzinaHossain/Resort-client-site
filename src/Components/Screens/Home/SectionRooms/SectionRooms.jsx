@@ -1,4 +1,3 @@
-import React from "react"
 import SectionHeader from "../../../Molecules/SectionHeader/SectionHeader"
 import { roomData } from "./SectionRoomsData"
 import { roomCardStyle } from "./Styles"
