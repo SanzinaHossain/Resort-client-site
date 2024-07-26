@@ -27,7 +27,7 @@ export default function Header() {
           </div>
         </ul>
         <div className={HeaderStyles.buttonContainer}>
-          <NavLink to="" className={HeaderStyles.loginLink}>
+          <NavLink to="/login" className={HeaderStyles.loginLink}>
             Login
           </NavLink>
         </div>

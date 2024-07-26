@@ -7,6 +7,10 @@ import Home from "./Components/Screens/Home/Home.jsx"
 import Blog from "./Components/Screens/Blog/Blog.jsx"
 import Contact from "./Components/Screens/Contact/Contact.jsx"
 import Restaurant from "./Components/Screens/Restaurant/Restaurant.jsx"
+import Room from "./Components/Screens/Rooms/Room.jsx"
+import Login from "./Components/Registration/Login/Login.jsx"
+import Register from "./Components/Registration/Register/Register.jsx"
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,9 +32,22 @@ const router = createBrowserRouter([
         path: "/restaurant",
         element: <Restaurant />,
       },
+      {
+        path: "/rooms",
+        element: <Room />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
     ],
   },
 ])
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
