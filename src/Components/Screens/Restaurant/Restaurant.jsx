@@ -3,6 +3,7 @@ import coverImage from "../../../assets/background.jpg"
 import RestaurantHeader from "./RestaurantHeader"
 import RestaurantCustomerService from "./RestaurantCustomerService"
 import RestaurantMenu from "./RestaurantMenu"
+import RestaurantClientReview from "./RestaurantClientReview"
 
 export default function Restaurant() {
   return (
@@ -15,6 +16,7 @@ export default function Restaurant() {
       <RestaurantHeader />
       <RestaurantCustomerService />
       <RestaurantMenu />
+      <RestaurantClientReview />
     </div>
   )
 }

@@ -12,13 +12,13 @@ export const RestaurantHeaderStyle = {
 
 export const FoodItemsButtonStyle = {
   container:
-    " flex lg:gap-x-10 gap-x-2 w-[100vw] justify-center items-center lg:px-0 px-2 my-5",
+    " flex lg:gap-x-10 gap-x-2 w-[100vw] justify-center items-center lg:px-0 px-2 my-5 lg:w-auto",
   buttonStyle:
     "w-24 border-2 border-secondary p-2 mt-5 bg-secondary text-white  font-bold",
 }
 
 export const RestaurantMenuStyle = {
-  container: "p-10 flex flex-col justify-center items-center",
+  container: "px-10 flex flex-col justify-center items-center lg:py-24 py-10",
   titleStyle: "text-black text-center text-4xl playwrite-gb-j-title",
   descriptionStyle: "text-black text-center mt-3 justify-center",
   foodMenuContainer:
@@ -37,7 +37,7 @@ export const SingleFoodMenuStyle = {
 }
 
 export const RestaurantCustomerServiceStyle = {
-  container: "grid lg:grid-cols-2 grid-cols-1",
+  container: "grid lg:grid-cols-2 grid-cols-1 pt-20",
   imageContainer: "h-full",
   dataContainer: "bg-secondary p-10",
   subTitleStyle: "text-white text-xl",
@@ -48,4 +48,15 @@ export const RestaurantCustomerServiceStyle = {
   serviceDataContainer: "flex justify-center items-center gap-x-2",
   iconStyle: "text-primary text-2xl",
   textStyle: "text-white",
+}
+
+export const RestaurantClientReviewStyle = {
+  container: "grid lg:grid-cols-2 grid-cols-1 mt-10",
+  reviewContainer: "bg-black p-10 w-full",
+  singleReviewContainer: "lg:h-96 py-5 h-auto justify-center items-center",
+  titleStyle:
+    "text-primary playwrite-gb-j-title text-2xl font-bold text-justify",
+  reviewStyle: "text-white text-justify mt-3",
+  nameStyle: "text-white text-2xl my-3 playwrite-gb-j-title text-start",
+  ratingContainer: "flex items-center gap-x-1 mt-5 text-primary",
 }

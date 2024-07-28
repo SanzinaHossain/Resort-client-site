@@ -162,3 +162,27 @@ export const RestaurantMenuData = {
   description:
     " At the heart of Northcote is the Michelin star restaurant, elegant and sophisticated, overlooking the gardens and connecting dishes to the landscapes many ingredients originate from. Menu Highlights",
 }
+
+export const clientReviews = [
+  {
+    title: "ONE OF THE BEST HOTELS I'VE EVER STAYED IN",
+    name: " Mr. Sean G. Pearson, UK ",
+    review:
+      "My birthday party was better and even more “delicious” than I had hoped. Stephane and staff made everyone feel at home as soon as they walked in the door. I can’t thank you enough for allowing us to use the restaurant instead of having the party at my home. It was a memorable occasion for all of us.",
+    rating: 5,
+  },
+  {
+    title: "THANK YOU FOR DINNER LAST NIGHT! AMAZING",
+    name: "Katty, Germany ",
+    review:
+      "My birthday party was better and even more “delicious” than I had hoped. Stephane and staff made everyone feel at home as soon as they walked in the door. I can’t thank you enough for allowing us to use the restaurant instead of having the party at my home. It was a memorable occasion for all of us.",
+    rating: 4,
+  },
+  {
+    title: "ONE OF THE BEST HOTELS I'VE EVER STAYED IN",
+    name: "Justin, United Kingdom ",
+    review:
+      "My birthday party was better and even more “delicious” than I had hoped. Stephane and staff made everyone feel at home as soon as they walked in the door. I can’t thank you enough for allowing us to use the restaurant instead of having the party at my home. It was a memorable occasion for all of us.",
+    rating: 3,
+  },
+]
