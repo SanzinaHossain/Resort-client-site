@@ -4,6 +4,7 @@ import RestaurantHeader from "./RestaurantHeader"
 import RestaurantCustomerService from "./RestaurantCustomerService"
 import RestaurantMenu from "./RestaurantMenu"
 import RestaurantClientReview from "./RestaurantClientReview"
+import RestaurantReviewForm from "./RestaurantReviewForm"
 
 export default function Restaurant() {
   return (
@@ -17,6 +18,7 @@ export default function Restaurant() {
       <RestaurantCustomerService />
       <RestaurantMenu />
       <RestaurantClientReview />
+      {/* <RestaurantReviewForm /> */}
     </div>
   )
 }

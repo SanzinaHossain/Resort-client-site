@@ -13,7 +13,6 @@ export default function RestaurantClientReview() {
         alt="Restaurant"
         className="w-full h-full object-cover"
       />
-
       <div className={RestaurantClientReviewStyle.reviewContainer}>
         <Carousel showArrows={false} showThumbs={false} showStatus={false}>
           {clientReviews.map((client, index) => (

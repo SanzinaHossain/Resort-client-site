@@ -14,13 +14,7 @@ export default function Room() {
       <div className="p-10 bg-white grid lg:grid-cols-2 justify-evenly place-items-center gap-10 grid-cols-1">
         {RoomData.map((room) => (
           <div>
-            <Carousel autoPlay={true} showThumbs={false}>
-              {room.image.map((r) => (
-                <div>
-                  <img src={r} />
-                </div>
-              ))}
-            </Carousel>
+            <img src={room.image} />
 
             <div className="flex flex-col justify-center items-center p-5">
               <h1 className="text-3xl text-black font-bold text-center">

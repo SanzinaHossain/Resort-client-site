@@ -52,7 +52,7 @@ export const RestaurantCustomerServiceStyle = {
 
 export const RestaurantClientReviewStyle = {
   container: "grid lg:grid-cols-2 grid-cols-1 mt-10",
-  reviewContainer: "bg-black p-10 w-full",
+  reviewContainer: "bg-secondary p-10 w-full",
   singleReviewContainer: "lg:h-96 py-5 h-auto justify-center items-center",
   titleStyle:
     "text-primary playwrite-gb-j-title text-2xl font-bold text-justify",

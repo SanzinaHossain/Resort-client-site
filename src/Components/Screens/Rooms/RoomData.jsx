@@ -15,7 +15,7 @@ import { LuBath } from "react-icons/lu"
 
 export const RoomData = [
   {
-    image: [room4, room5, room6],
+    image: room4,
 
     title: "Beach Villa Room",
     description:
@@ -37,7 +37,7 @@ export const RoomData = [
     ],
   },
   {
-    image: [room11, room12, room13],
+    image: room5,
     title: "Superior Panorama Room",
     description:
       " This is a luxurious room with wifi, morning breakfast,spa and other facility included.",
@@ -58,7 +58,7 @@ export const RoomData = [
     ],
   },
   {
-    image: [room11, room12, room13],
+    image: room12,
 
     title: "Presidential Suite",
     description:
@@ -80,7 +80,7 @@ export const RoomData = [
     ],
   },
   {
-    image: [room4, room5, room6],
+    image: room11,
 
     title: "Alpine Single Room",
     description:
@@ -102,7 +102,7 @@ export const RoomData = [
     ],
   },
   {
-    image: [room11, room12, room13],
+    image: room8,
     title: "King Bed Room",
     description:
       " This is a luxurious room with wifi, morning breakfast,spa and other facility included.",
@@ -123,7 +123,7 @@ export const RoomData = [
     ],
   },
   {
-    image: [room11, room12, room13],
+    image: room13,
 
     title: "Deluxe Double Room",
     description:
