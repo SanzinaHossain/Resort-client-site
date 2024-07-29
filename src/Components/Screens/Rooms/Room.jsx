@@ -1,8 +1,7 @@
 import SectionCover from "../../Molecules/SectionCover/SectionCover"
-import coverImage from "../../../assets/background.jpg"
+import coverImage from "../../../assets/background3.avif"
 import { RoomData } from "./RoomData"
-import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loader
-import { Carousel } from "react-responsive-carousel"
+
 export default function Room() {
   return (
     <div>

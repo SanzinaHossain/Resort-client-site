@@ -1,5 +1,5 @@
 import SectionCover from "../../Molecules/SectionCover/SectionCover"
-import coverImage from "../../../assets/background.jpg"
+import coverImage from "../../../assets/background1.jpeg"
 import RestaurantHeader from "./RestaurantHeader"
 import RestaurantCustomerService from "./RestaurantCustomerService"
 import RestaurantMenu from "./RestaurantMenu"
