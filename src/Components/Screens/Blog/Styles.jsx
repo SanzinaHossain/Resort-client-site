@@ -53,3 +53,9 @@ export const BlogCommentFormStyle = {
   inputStyle: "w-full  bg-white border-2 border-gray-200 p-5 mt-3",
   flexInputStyle: "flex w-full justify-around gap-x-5 mb-3",
 }
+
+export const BlogDetailsInformationStyle = {
+  container: "lg:col-span-2 col-span-1  text-black w-full",
+  imageContainer:
+    "flex gap-x-5 my-5 lg:flex-row  md:flex-row flex-col  gap-y-5",
+}
