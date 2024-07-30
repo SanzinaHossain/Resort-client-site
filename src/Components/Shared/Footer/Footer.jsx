@@ -2,10 +2,13 @@ import { FooterData } from "./FooterData"
 import FooterNav from "./FooterNav"
 import FooterSocialMediaIcon from "./FooterSocialMediaIcon"
 import { FooterStyle } from "./FooterStyle"
+import FooterSubscriberForm from "./FooterSubscribeForm"
 
 export default function Footer() {
   return (
     <footer className={FooterStyle.footerContainer}>
+      <FooterSubscriberForm />
+      <div className="divider"></div>
       <div className="footer">
         <aside>
           <p className={FooterStyle.footerTitle}>Vacay</p>
