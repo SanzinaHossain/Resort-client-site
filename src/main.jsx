@@ -10,6 +10,7 @@ import Restaurant from "./Components/Screens/Restaurant/Restaurant.jsx"
 import Room from "./Components/Screens/Rooms/Room.jsx"
 import Login from "./Components/Registration/Login/Login.jsx"
 import Register from "./Components/Registration/Register/Register.jsx"
+import BlogDetails from "./Components/Screens/Blog/BlogDetails/BlogDetails.jsx"
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blog />,
+      },
+      {
+        path: "/blogDetails/:id",
+        element: <BlogDetails />,
       },
       {
         path: "/contact",

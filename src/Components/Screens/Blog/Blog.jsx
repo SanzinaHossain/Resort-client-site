@@ -21,7 +21,7 @@ const Blog = () => {
               <p className={BlogStyle.blogNameStyle}>{blog.name}</p>
               <p className={BlogStyle.blogDetailsStyle}>{blog.details}</p>
               <div className="divider"></div>
-              <BlogBasicInformation blog={blog} />
+              <BlogBasicInformation blog={blog} button={true} />
             </div>
           </div>
         ))}

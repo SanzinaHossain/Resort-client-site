@@ -1,8 +1,10 @@
 import { FaComment, FaUserTag } from "react-icons/fa"
 import { GrValidate } from "react-icons/gr"
 import { BlogBasicStyle } from "./Styles"
+import { useNavigate } from "react-router-dom"
 
-export default function BlogBasicInformation({ blog }) {
+export default function BlogBasicInformation({ blog, button }) {
+  const navigate = useNavigate()
   return (
     <div className={BlogBasicStyle.container}>
       <div className={BlogBasicStyle.singleItemContainer}>
@@ -21,9 +23,14 @@ export default function BlogBasicInformation({ blog }) {
           <p>Comment: {blog.comment}</p>
         </div>
       </div>
-      <button className={BlogBasicStyle.buttonStyle}>
-        Continue Reading....
-      </button>
+      {button ? (
+        <button
+          className={BlogBasicStyle.buttonStyle}
+          onClick={() => navigate(`/blogDetails/${blog.id}`, { state: blog })}
+        >
+          Continue Reading....
+        </button>
+      ) : null}
     </div>
   )
 }
