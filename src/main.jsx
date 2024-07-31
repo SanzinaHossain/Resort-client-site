@@ -11,6 +11,7 @@ import Room from "./Components/Screens/Rooms/Room.jsx"
 import Login from "./Components/Registration/Login/Login.jsx"
 import Register from "./Components/Registration/Register/Register.jsx"
 import BlogDetails from "./Components/Screens/Blog/BlogDetails/BlogDetails.jsx"
+import AuthProvider from "./Context/AuthProvider.jsx"
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 )
