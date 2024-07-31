@@ -12,6 +12,7 @@ import Login from "./Components/Registration/Login/Login.jsx"
 import Register from "./Components/Registration/Register/Register.jsx"
 import BlogDetails from "./Components/Screens/Blog/BlogDetails/BlogDetails.jsx"
 import AuthProvider from "./Context/AuthProvider.jsx"
+import PrivateRoute from "./Components/Shared/PrivateRoute/PrivateRoute.jsx"
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/blogDetails/:id",
-        element: <BlogDetails />,
+        element: (
+          <PrivateRoute>
+            <BlogDetails />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/contact",
