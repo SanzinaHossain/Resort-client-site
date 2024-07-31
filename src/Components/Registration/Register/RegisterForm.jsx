@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom"
-import { handleSignUp } from "../../../Hooks/LoginHooks"
+import LoginHooks from "../../../Hooks/LoginHooks"
+
 export default function RegisterForm() {
   const navigate = useNavigate()
+  const { handleSignUp } = LoginHooks()
+
   return (
     <form onSubmit={handleSignUp}>
       <h1 className="text-center text-3xl text-white my-3">Sign Up !!!</h1>

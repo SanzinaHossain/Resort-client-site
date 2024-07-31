@@ -1,8 +1,11 @@
 import { useNavigate } from "react-router-dom"
-import { handleLogin } from "../../../Hooks/LoginHooks"
 import { FcGoogle } from "react-icons/fc"
+import LoginHooks from "../../../Hooks/LoginHooks"
+
 export default function LoginForm() {
   const navigate = useNavigate()
+  const { handleGoogleLogin, handleLogin } = LoginHooks()
+
   return (
     <form onSubmit={handleLogin}>
       <h1 className="text-center text-3xl text-white my-3">Login Here</h1>
@@ -27,7 +30,10 @@ export default function LoginForm() {
         style={{ cursor: "pointer" }}
       />
       <div className="divider ">OR</div>
-      <button className="p-4 w-full h-16 my-5 bg-black text-white text-xl font-bold flex items-center gap-x-2 justify-center">
+      <button
+        className="p-4 w-full h-16 my-5 bg-black text-white text-xl font-bold flex items-center gap-x-2 justify-center"
+        onClick={handleGoogleLogin}
+      >
         <FcGoogle className="text-4xl"></FcGoogle>
         Continue With Google
       </button>
