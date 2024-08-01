@@ -13,6 +13,7 @@ import Register from "./Components/Registration/Register/Register.jsx"
 import BlogDetails from "./Components/Screens/Blog/BlogDetails/BlogDetails.jsx"
 import AuthProvider from "./Context/AuthProvider.jsx"
 import PrivateRoute from "./Components/Shared/PrivateRoute/PrivateRoute.jsx"
+import RoomDetails from "./Components/Screens/Rooms/RoomDetails.jsx"
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "/rooms",
         element: <Room />,
+      },
+      {
+        path: "/roomDetails/:id",
+        element: <RoomDetails />,
       },
       {
         path: "/login",

@@ -1,12 +1,23 @@
-import { blogData } from "../BlogData"
+import { useState } from "react"
 import { BlogListStyle } from "../Styles"
+import Loading from "../../../Molecules/Loading"
 
 export default function BlogList() {
+  const [blogData, setBlogData] = useState()
+  const [loading, setLoading] = useState(true)
+  fetch("http://localhost:5000/blogs")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data)
+      setBlogData(data)
+      setLoading(false)
+    })
   return (
     <div className={BlogListStyle.container}>
       <p className={BlogListStyle.titleStyle}>Blog List </p>
       <div className={BlogListStyle.dividerStyle}></div>
-      {blogData.map((blog, index) => (
+      <Loading isLoading={loading} />
+      {blogData?.map((blog, index) => (
         <div key={index} className={BlogListStyle.dataContainer}>
           <img src={blog.image} className={BlogListStyle.imageStyle} />
           <p>{blog.name}</p>

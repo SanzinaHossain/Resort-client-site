@@ -7,28 +7,30 @@ export default function LoginForm() {
   const { handleGoogleLogin, handleLogin } = LoginHooks()
 
   return (
-    <form onSubmit={handleLogin}>
-      <h1 className="text-center text-3xl text-white my-3">Login Here</h1>
-      <input
-        className="p-5 w-full h-16 my-5 bg-white text-black "
-        name="email"
-        type="email"
-        required={true}
-        placeholder="Enter Your Email"
-      />
-      <input
-        className="p-5 w-full h-16 my-5 bg-white text-black"
-        name="password"
-        type="password"
-        required={true}
-        placeholder="Enter Your Password"
-      />
-      <input
-        className="p-4 w-full h-16 my-5 bg-black font-bold  text-white text-xl"
-        type="submit"
-        value="Login"
-        style={{ cursor: "pointer" }}
-      />
+    <div>
+      <form onSubmit={handleLogin}>
+        <h1 className="text-center text-3xl text-white my-3">Login Here</h1>
+        <input
+          className="p-5 w-full h-16 my-5 bg-white text-black "
+          name="email"
+          type="email"
+          required={true}
+          placeholder="Enter Your Email"
+        />
+        <input
+          className="p-5 w-full h-16 my-5 bg-white text-black"
+          name="password"
+          type="password"
+          required={true}
+          placeholder="Enter Your Password"
+        />
+        <input
+          className="p-4 w-full h-16 my-5 bg-black font-bold  text-white text-xl"
+          type="submit"
+          value="Login"
+          style={{ cursor: "pointer" }}
+        />
+      </form>
       <div className="divider ">OR</div>
       <button
         className="p-4 w-full h-16 my-5 bg-black text-white text-xl font-bold flex items-center gap-x-2 justify-center"
@@ -43,6 +45,6 @@ export default function LoginForm() {
           Register
         </button>
       </p>
-    </form>
+    </div>
   )
 }

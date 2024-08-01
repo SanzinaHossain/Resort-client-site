@@ -26,7 +26,7 @@ export default function BlogBasicInformation({ blog, button }) {
       {button ? (
         <button
           className={BlogBasicStyle.buttonStyle}
-          onClick={() => navigate(`/blogDetails/${blog.id}`, { state: blog })}
+          onClick={() => navigate(`/blogDetails/${blog._id}`, { state: blog })}
         >
           Continue Reading....
         </button>

@@ -1,8 +1,17 @@
 import SectionCover from "../../Molecules/SectionCover/SectionCover"
 import coverImage from "../../../assets/background3.avif"
-import { RoomData } from "./RoomData"
+import { useNavigate } from "react-router-dom"
+import { useState } from "react"
 
 export default function Room() {
+  const navigate = useNavigate()
+  const [roomData, setRoomData] = useState()
+  fetch("http://localhost:5000/rooms")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data)
+      setRoomData(data)
+    })
   return (
     <div>
       <SectionCover
@@ -11,8 +20,8 @@ export default function Room() {
         image={coverImage}
       />
       <div className="p-10 bg-white grid lg:grid-cols-2 justify-evenly place-items-center gap-10 grid-cols-1">
-        {RoomData.map((room) => (
-          <div>
+        {roomData?.map((room, index) => (
+          <div key={index}>
             <img src={room.image} />
 
             <div className="flex flex-col justify-center items-center p-5">
@@ -23,17 +32,19 @@ export default function Room() {
                 {room.description}
               </h1>
               <div className="flex items-center my-2 lg:gap-x-5 gap-x-2">
-                {room.facilities.map((facility) => {
-                  const IconComponent = facility.icon
-                  return (
-                    <p className="flex gap-x-2 items-center text-black">
-                      <IconComponent className="text-primary font-bold text-xl" />
-                      {facility.title}
-                    </p>
-                  )
-                })}
+                {room.facilities.map((facility) => (
+                  <p className="flex gap-x-2 items-center text-black">
+                    {/* <IconComponent className="text-primary font-bold text-xl" /> */}
+                    {facility.title}
+                  </p>
+                ))}
               </div>
-              <button className="border-2 border-secondary p-2 my-3 text-black hover:bg-secondary hover:text-white hover:font-bold">
+              <button
+                onClick={() =>
+                  navigate(`/roomDetails/${room.id}`, { state: room })
+                }
+                className="border-2 border-secondary p-2 my-3 text-black hover:bg-secondary hover:text-white hover:font-bold"
+              >
                 Room Details...
               </button>
             </div>

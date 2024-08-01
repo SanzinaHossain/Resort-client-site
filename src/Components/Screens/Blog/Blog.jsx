@@ -1,11 +1,22 @@
-import React from "react"
+import React, { useContext, useState } from "react"
 import SectionCover from "../../Molecules/SectionCover/SectionCover"
 import coverImage from "../../../assets/background2.jpg"
-import { blogData } from "./BlogData"
 import BlogBasicInformation from "./BlogBasicInformation"
 import { BlogStyle } from "./Styles"
+import Loading from "../../Molecules/Loading"
 
 const Blog = () => {
+  const [blogData, setBlogData] = useState()
+  const [loading, setLoading] = useState(true)
+
+  fetch("http://localhost:5000/blogs")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data)
+      setBlogData(data)
+      setLoading(false)
+    })
+
   return (
     <div className="bg-white">
       <SectionCover
@@ -14,7 +25,8 @@ const Blog = () => {
         image={coverImage}
       />
       <div className={BlogStyle.container}>
-        {blogData.map((blog, index) => (
+        <Loading isLoading={loading} />
+        {blogData?.map((blog, index) => (
           <div key={index} className="">
             <img src={blog.image} className="w-full" />
             <div className={BlogStyle.dataContainer}>
