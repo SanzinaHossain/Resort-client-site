@@ -1,14 +1,24 @@
-import { useLocation } from "react-router-dom"
+import { useLocation, useParams } from "react-router-dom"
 import coverImage from "../../../../assets/background2.jpg"
 import SectionCover from "../../../Molecules/SectionCover/SectionCover"
 import BlogTag from "./BlogTag"
 import BlogList from "./BlogList"
 import BlogDetailsInformation from "./BlogDetailsInformation"
 import { BlogDetailsStyle } from "../Styles"
+import { useState } from "react"
+import Loading from "../../../Molecules/Loading"
 
 export default function BlogDetails() {
-  const location = useLocation()
-  const data = location.state
+  const { id } = useParams()
+  const [blogData, setBlogData] = useState()
+  const [loading, setLoading] = useState(true)
+
+  fetch(`http://localhost:5000/blogs/${id}`)
+    .then((res) => res.json())
+    .then((data) => {
+      setBlogData(data)
+      setLoading(false)
+    })
 
   return (
     <>
@@ -18,7 +28,11 @@ export default function BlogDetails() {
         image={coverImage}
       />
       <div className={BlogDetailsStyle.container}>
-        <BlogDetailsInformation data={data} />
+        {blogData ? (
+          <BlogDetailsInformation data={blogData} />
+        ) : (
+          <Loading isLoading={loading} />
+        )}
         <div className={BlogDetailsStyle.dataContainer}>
           <BlogTag />
           <BlogList />

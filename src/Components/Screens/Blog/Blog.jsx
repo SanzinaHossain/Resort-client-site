@@ -12,7 +12,6 @@ const Blog = () => {
   fetch("http://localhost:5000/blogs")
     .then((res) => res.json())
     .then((data) => {
-      console.log(data)
       setBlogData(data)
       setLoading(false)
     })

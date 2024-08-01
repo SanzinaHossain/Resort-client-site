@@ -3,7 +3,7 @@ import { HeaderStyles } from "./HeaderStyles"
 import HeaderIcon from "./HeaderIcon"
 import { routes } from "./HeaderData"
 import HeaderLink from "./HeaderLink"
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import { AuthContext } from "../../../Context/AuthProvider"
 import { FiLogOut } from "react-icons/fi"
 import { FaRegUserCircle, FaSignOutAlt } from "react-icons/fa"
@@ -13,6 +13,7 @@ export default function Header() {
   const [open, setOpen] = useState(false)
   const { user } = useContext(AuthContext)
   const { handleLogOut } = LoginHooks()
+  const navigate = useNavigate()
   return (
     <nav className={HeaderStyles.headerContainer}>
       <div className="flex justify-between">
@@ -34,7 +35,9 @@ export default function Header() {
         <div className={HeaderStyles.buttonContainer}>
           {user ? (
             <div className="flex gap-x-5 justify-center items-center">
-              <FaRegUserCircle className="text-2xl" />
+              <NavLink to="/profile" className={HeaderStyles.loginLink}>
+                <FaRegUserCircle className="text-2xl" />
+              </NavLink>
               <NavLink
                 onClick={() => handleLogOut()}
                 className={HeaderStyles.loginLink}

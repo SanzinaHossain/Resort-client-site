@@ -9,7 +9,6 @@ export default function Room() {
   fetch("http://localhost:5000/rooms")
     .then((res) => res.json())
     .then((data) => {
-      console.log(data)
       setRoomData(data)
     })
   return (
@@ -40,9 +39,7 @@ export default function Room() {
                 ))}
               </div>
               <button
-                onClick={() =>
-                  navigate(`/roomDetails/${room.id}`, { state: room })
-                }
+                onClick={() => navigate(`/roomDetails/${room._id}`)}
                 className="border-2 border-secondary p-2 my-3 text-black hover:bg-secondary hover:text-white hover:font-bold"
               >
                 Room Details...

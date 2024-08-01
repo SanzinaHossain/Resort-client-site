@@ -14,6 +14,7 @@ import BlogDetails from "./Components/Screens/Blog/BlogDetails/BlogDetails.jsx"
 import AuthProvider from "./Context/AuthProvider.jsx"
 import PrivateRoute from "./Components/Shared/PrivateRoute/PrivateRoute.jsx"
 import RoomDetails from "./Components/Screens/Rooms/RoomDetails.jsx"
+import UserProfile from "./Components/Screens/UserProfile/UserProfile.jsx"
 
 const router = createBrowserRouter([
   {
@@ -49,8 +50,16 @@ const router = createBrowserRouter([
         element: <Room />,
       },
       {
+        path: "/profile",
+        element: <UserProfile />,
+      },
+      {
         path: "/roomDetails/:id",
-        element: <RoomDetails />,
+        element: (
+          <PrivateRoute>
+            <RoomDetails />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
