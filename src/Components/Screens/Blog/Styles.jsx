@@ -55,7 +55,7 @@ export const BlogCommentFormStyle = {
 }
 
 export const BlogDetailsInformationStyle = {
-  container: "lg:col-span-2 col-span-1  text-black w-full",
+  container: "lg:col-span-2 col-span-1  text-black ",
   imageContainer:
-    "flex gap-x-5 my-5 lg:flex-row  md:flex-row flex-col  gap-y-5",
+    "flex gap-x-5 my-5 lg:flex-row  md:flex-row flex-col  gap-y-5 ",
 }

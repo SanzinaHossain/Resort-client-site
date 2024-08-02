@@ -9,10 +9,16 @@ export default function UserProfile() {
   const [userData, setUserData] = useState()
   const { user } = useContext(AuthContext)
 
-  fetch(`http://localhost:5000/roomBooking?email=${user.email}`)
+  fetch(
+    `https://resort-server-delta.vercel.app/roomBooking?email=${user.email}`
+  )
     .then((res) => res.json())
     .then((data) => {
-      setUserData(data)
+      if (data) {
+        setUserData(data)
+      } else {
+        console.log("No Data Found")
+      }
     })
 
   return (

@@ -6,7 +6,7 @@ import { useState } from "react"
 export default function Room() {
   const navigate = useNavigate()
   const [roomData, setRoomData] = useState()
-  fetch("http://localhost:5000/rooms")
+  fetch("https://resort-server-delta.vercel.app/rooms")
     .then((res) => res.json())
     .then((data) => {
       setRoomData(data)
@@ -31,8 +31,8 @@ export default function Room() {
                 {room.description}
               </h1>
               <div className="flex items-center my-2 lg:gap-x-5 gap-x-2">
-                {room.facilities.map((facility) => (
-                  <p className="flex gap-x-2 items-center text-black">
+                {room.facilities.map((facility, i) => (
+                  <p key={i} className="flex gap-x-2 items-center text-black">
                     {/* <IconComponent className="text-primary font-bold text-xl" /> */}
                     {facility.title}
                   </p>

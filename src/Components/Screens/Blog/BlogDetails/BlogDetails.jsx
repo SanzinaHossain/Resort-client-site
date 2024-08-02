@@ -13,7 +13,7 @@ export default function BlogDetails() {
   const [blogData, setBlogData] = useState()
   const [loading, setLoading] = useState(true)
 
-  fetch(`http://localhost:5000/blogs/${id}`)
+  fetch(`https://resort-server-delta.vercel.app/blogs/${id}`)
     .then((res) => res.json())
     .then((data) => {
       setBlogData(data)

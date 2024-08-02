@@ -10,7 +10,7 @@ export default function RoomDetails() {
   const [roomData, setRoomData] = useState()
   const [loading, setLoading] = useState(true)
 
-  fetch(`http://localhost:5000/rooms/${id}`)
+  fetch(`https://resort-server-delta.vercel.app/rooms/${id}`)
     .then((res) => res.json())
     .then((data) => {
       setRoomData(data)

@@ -1,7 +1,7 @@
 export const handleCancelBooking = (id, setUserData) => {
   console.log("id:", id)
 
-  fetch(`http://localhost:5000/roomBooking/${id}`, {
+  fetch(`https://resort-server-delta.vercel.app/roomBooking/${id}`, {
     method: "DELETE",
   })
     .then((res) => res.json())

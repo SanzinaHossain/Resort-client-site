@@ -1,11 +1,10 @@
 import { useContext } from "react"
 import { BlogCommentFormStyle } from "../Blog/Styles"
 import { AuthContext } from "../../../Context/AuthProvider"
-import { handleRoomBooking } from "../../../Hooks/RoomBookingHooks"
-
+import RoomBookingHooks from "../../../Hooks/RoomBookingHooks"
 export default function RoomReservationForm() {
   const { user } = useContext(AuthContext)
-
+  const { handleRoomBooking } = RoomBookingHooks()
   return (
     <div className="">
       <h1 className="text-3xl text-black font-bold mb-5">Book Your Room</h1>
