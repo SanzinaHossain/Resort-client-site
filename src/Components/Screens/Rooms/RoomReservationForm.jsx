@@ -33,6 +33,15 @@ export default function RoomReservationForm() {
           value={user.email}
         ></input>
         <label className="text-xl mt-3">
+          Mobile No<span className="text-red-700 text-lg">*</span>
+        </label>
+        <input
+          type="text"
+          name="mobile_no"
+          className="w-full  bg-white border-2 border-gray-200 p-3 my-3"
+          required={true}
+        ></input>
+        <label className="text-xl mt-3">
           Room Type<span className="text-red-700 text-lg">*</span>
         </label>
         <select
