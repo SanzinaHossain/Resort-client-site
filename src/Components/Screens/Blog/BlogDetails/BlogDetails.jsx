@@ -7,6 +7,7 @@ import BlogDetailsInformation from "./BlogDetailsInformation"
 import { BlogDetailsStyle } from "../Styles"
 import { useState } from "react"
 import Loading from "../../../Molecules/Loading"
+import BlogComments from "./BlogComments"
 
 export default function BlogDetails() {
   const { id } = useParams()
@@ -36,6 +37,7 @@ export default function BlogDetails() {
         <div className={BlogDetailsStyle.dataContainer}>
           <BlogTag />
           <BlogList />
+          <BlogComments id={blogData?._id} />
         </div>
       </div>
     </>
