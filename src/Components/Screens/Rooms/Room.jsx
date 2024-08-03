@@ -2,14 +2,17 @@ import SectionCover from "../../Molecules/SectionCover/SectionCover"
 import coverImage from "../../../assets/background3.avif"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
+import Loading from "../../Molecules/Loading"
 
 export default function Room() {
   const navigate = useNavigate()
+  const [loading, setLoading] = useState(true)
   const [roomData, setRoomData] = useState()
   fetch("https://resort-server-delta.vercel.app/rooms")
     .then((res) => res.json())
     .then((data) => {
       setRoomData(data)
+      setLoading(false)
     })
   return (
     <div>
@@ -19,6 +22,7 @@ export default function Room() {
         image={coverImage}
       />
       <div className="p-10 bg-white grid lg:grid-cols-2 justify-evenly place-items-center gap-10 grid-cols-1">
+        <Loading isLoading={loading} />
         {roomData?.map((room, index) => (
           <div key={index}>
             <img src={room.image} />

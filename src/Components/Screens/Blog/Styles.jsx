@@ -14,12 +14,6 @@ export const BlogBasicStyle = {
   buttonStyle: "text-primary font-bold text-xl lg:justify-self-end",
 }
 
-export const BlogDetailsStyle = {
-  container:
-    "bg-white p-10 grid lg:grid-cols-3  grid-cols-1 justify-evenly w-full text-justify",
-  dataContainer: "col-span-1 lg:p-5 p-0",
-}
-
 export const BlogFactorStyle = {
   container: "bg-gray-50 my-5 p-5",
   titleStyle: "text-2xl mb-5",
@@ -53,9 +47,13 @@ export const BlogCommentFormStyle = {
   inputStyle: "w-full  bg-white border-2 border-gray-200 p-5 mt-3",
   flexInputStyle: "flex w-full justify-around gap-x-5 mb-3",
 }
-
+export const BlogDetailsStyle = {
+  container:
+    "bg-white p-10 grid lg:grid-cols-3  grid-cols-1 justify-evenly w-full text-justify",
+  dataContainer: "col-span-1 lg:p-5 p-0",
+}
 export const BlogDetailsInformationStyle = {
-  container: "lg:col-span-2 col-span-1  text-black ",
+  container: "lg:col-span-2 col-span-1  text-black w-full",
   imageContainer:
-    "flex gap-x-5 my-5 lg:flex-row  md:flex-row flex-col  gap-y-5 ",
+    "flex gap-x-5 my-5 lg:flex-row  md:flex-row flex-col  gap-y-5 w-full ",
 }
