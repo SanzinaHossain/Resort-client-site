@@ -12,14 +12,21 @@ export default function BlogComments({ id }) {
     })
 
   return (
-    <div className="bg-gray-200 p-5 text-black">
-      <p className="text-xl font-bold">Blog Comments</p>
+    <div className=" text-black">
+      <p className="text-3xl ">Comments</p>
       <div className="divider"></div>
       {blogComments?.map((comment) => (
-        <div>
-          <p>{comment.comment}</p>
-          <p>{comment.name}</p>
-        </div>
+        <>
+          <div>
+            <p className="font-bold text-lg">{comment.name}</p>
+            <p className="my-3">{comment.comment}</p>
+            <div className="flex items-center gap-x-5">
+              <p>{comment?.date}</p>
+              <button className="text-primary">Reply</button>
+            </div>
+          </div>
+          <div className="divider"></div>
+        </>
       ))}
     </div>
   )

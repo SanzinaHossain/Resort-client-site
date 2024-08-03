@@ -5,6 +5,7 @@ import blog7 from "../../../../assets/Blog/blog7.jpg"
 import BlogFactor from "./BlogFactor"
 import BlogCommentForm from "./BlogCommentForm"
 import { BlogDetailsInformationStyle } from "../Styles"
+import BlogComments from "./BlogComments"
 
 export default function BlogDetailsInformation({ data }) {
   return (
@@ -23,6 +24,7 @@ export default function BlogDetailsInformation({ data }) {
       <BlogFactor />
       <p>{text3}</p>
       <div className="divider"></div>
+      <BlogComments id={data?._id} />
       <BlogCommentForm commentToken={data?._id} />
     </div>
   )

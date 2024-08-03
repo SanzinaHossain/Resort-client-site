@@ -9,13 +9,6 @@ export default function BlogCommentForm({ commentToken }) {
         className={BlogCommentFormStyle.formStyle}
         onSubmit={(e) => handleBlogComment(e, commentToken)}
       >
-        <label className={BlogCommentFormStyle.labelStyle}>Comment*</label>
-        <textarea
-          type="text"
-          name="comment"
-          className={BlogCommentFormStyle.textAreaStyle}
-          required={true}
-        ></textarea>
         <div className={BlogCommentFormStyle.flexInputStyle}>
           <div className="w-full">
             <label className={BlogCommentFormStyle.labelStyle}>Name*</label>
@@ -36,12 +29,14 @@ export default function BlogCommentForm({ commentToken }) {
             ></input>
           </div>
         </div>
-        <label className={BlogCommentFormStyle.labelStyle}>Website*</label>
-        <input
+        <label className={BlogCommentFormStyle.labelStyle}>Comment*</label>
+        <textarea
           type="text"
-          name="website"
-          className={BlogCommentFormStyle.inputStyle}
-        ></input>
+          name="comment"
+          className={BlogCommentFormStyle.textAreaStyle}
+          required={true}
+        ></textarea>
+
         <input
           className={BlogCommentFormStyle.buttonStyle}
           type="submit"

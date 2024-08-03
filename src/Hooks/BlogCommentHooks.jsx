@@ -3,13 +3,15 @@ const handleBlogComment = (e, commentToken) => {
   const name = e.target.name.value
   const email = e.target.email.value
   const comment = e.target.comment.value
-  const website = e.target.website.value
+  const today = new Date()
+  const options = { day: "numeric", month: "long", year: "numeric" }
+  const date = today.toLocaleDateString("en-US", options)
 
   const BlogCommentData = {
     name,
     comment,
     email,
-    website,
+    date,
     commentToken,
   }
 

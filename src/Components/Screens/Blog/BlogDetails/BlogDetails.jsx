@@ -37,7 +37,6 @@ export default function BlogDetails() {
         <div className={BlogDetailsStyle.dataContainer}>
           <BlogTag />
           <BlogList />
-          <BlogComments id={blogData?._id} />
         </div>
       </div>
     </>
