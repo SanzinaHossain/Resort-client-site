@@ -1,13 +1,13 @@
 import { handleBlogComment } from "../../../../Hooks/BlogCommentHooks"
 import { BlogCommentFormStyle } from "../Styles"
 
-export default function BlogCommentForm() {
+export default function BlogCommentForm({ commentToken }) {
   return (
     <div className={BlogCommentFormStyle.container}>
       <h1 className={BlogCommentFormStyle.titleStyle}>Leave A Comment</h1>
       <form
         className={BlogCommentFormStyle.formStyle}
-        onSubmit={handleBlogComment}
+        onSubmit={(e) => handleBlogComment(e, commentToken)}
       >
         <label className={BlogCommentFormStyle.labelStyle}>Comment*</label>
         <textarea

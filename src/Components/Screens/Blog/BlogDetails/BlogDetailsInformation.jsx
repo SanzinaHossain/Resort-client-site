@@ -23,7 +23,7 @@ export default function BlogDetailsInformation({ data }) {
       <BlogFactor />
       <p>{text3}</p>
       <div className="divider"></div>
-      <BlogCommentForm />
+      <BlogCommentForm commentToken={data?._id} />
     </div>
   )
 }
