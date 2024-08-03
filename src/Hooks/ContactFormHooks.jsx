@@ -6,7 +6,26 @@ const handleContactInfo = (e) => {
   const message = e.target.message.value
   const contactInfo = { name, contact, email, message }
   console.log(contactInfo)
-  e.target.reset()
+
+  fetch("http://localhost:5000/userContacts", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify(contactInfo),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      {
+        console.log(data)
+        if (data) {
+          e.target.reset()
+          alert("Message Send Successfully")
+        } else {
+          console.log("Send Message not successful")
+        }
+      }
+    })
 }
 
 export { handleContactInfo }

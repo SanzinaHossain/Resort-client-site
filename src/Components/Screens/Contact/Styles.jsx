@@ -4,7 +4,7 @@ export const ContactStyle = {
   formMainContainer: "flex justify-center items-center mt-5",
 
   // Contact Form Style
-  formStyle: "lg:w-[50vw] w-full h-full",
+  formStyle: "lg:w-[50vw] w-full h-full text-white",
   contactFormContainer: "bg-white w-full  text-center p-10",
   contactFormTitle: "text-4xl text-black font-bold mb-5",
   contactFormInput: "p-5 w-full h-16 my-5 bg-secondary",
