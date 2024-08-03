@@ -1,5 +1,6 @@
 export const RestaurantHeaderStyle = {
-  container: "flex flex-col justify-center items-center p-10",
+  container:
+    "flex flex-col justify-center items-center p-10 bg-white text-black",
   title: "text-black text-4xl mt-10 text-center playwrite-gb-j-title",
   description: "text-gray-800 lg:text-center my-5 text-justify ",
   detailsContainer:
@@ -18,7 +19,8 @@ export const FoodItemsButtonStyle = {
 }
 
 export const RestaurantMenuStyle = {
-  container: "px-10 flex flex-col justify-center items-center lg:py-24 py-10",
+  container:
+    "px-10 flex flex-col justify-center items-center lg:py-24 py-10 bg-white text-black",
   titleStyle: "text-black text-center text-4xl playwrite-gb-j-title",
   descriptionStyle: "text-black text-center mt-3 justify-center",
   foodMenuContainer:

@@ -17,7 +17,7 @@ export default function Restaurant() {
       <RestaurantHeader />
       <RestaurantCustomerService />
       <RestaurantMenu />
-      <RestaurantClientReview />
+      {/* <RestaurantClientReview /> */}
       {/* <RestaurantReviewForm /> */}
     </div>
   )

@@ -1,5 +1,5 @@
 export const roomCardStyle = {
-  container: "bg-white flex flex-col justify-center items-center p-10 ",
+  container: "bg-white flex flex-col justify-center items-center p-10 pt-0",
 
   // Style for SectionRoomCard
   cardContainer:

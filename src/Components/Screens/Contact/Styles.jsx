@@ -13,7 +13,7 @@ export const ContactStyle = {
   ContactFormWrapTextArea: "flex gap-x-5 flex-col lg:flex-row",
 
   // Contact Information Style
-  contactInformationContainer: "p-10",
+  contactInformationContainer: "p-10 bg-white text-black",
   ContactInformationTitle:
     "mb-10 text-center text-4xl text-black font-semibold",
   contactInformationDetailsContainer:
