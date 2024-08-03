@@ -33,7 +33,7 @@ export default function SectionAbout() {
         </p>
         <button
           onClick={() => navigate("/contact")}
-          className="hover:bg-secondary hover:text-white py-3 px-5 font-bold border-2 border-black rounded-lg "
+          className="hover:bg-secondary hover:text-white py-3 px-5 font-bold border-2 border-secondary rounded-lg "
         >
           Contact Us
         </button>

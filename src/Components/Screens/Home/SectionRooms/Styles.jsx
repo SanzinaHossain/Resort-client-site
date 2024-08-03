@@ -14,7 +14,7 @@ export const roomCardStyle = {
   roomDetailsIcon: "text-primary",
 
   // RoomButtonDetails
-  roomButtonDetailsContainer: "card-actions justify-end mt-2",
+  roomButtonDetailsContainer: "card-actions justify-end mt-5",
   buttonStyle: "border-2 border-primary p-2",
   roomButtonDetailsText: "text-2xl",
   roomButtonDetailsSubText: "text-primary font-bold",
