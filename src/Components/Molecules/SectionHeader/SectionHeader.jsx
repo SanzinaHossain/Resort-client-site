@@ -1,7 +1,7 @@
 import "./SectionHeader.css"
 export default function SectionHeader() {
   return (
-    <div className="mt-16 mb-20">
+    <div className="mt-10 mb-20">
       <h1 className="text-center text-md text-primary font-bold title1 mb-2">
         Welcome to Vacay Site
       </h1>
