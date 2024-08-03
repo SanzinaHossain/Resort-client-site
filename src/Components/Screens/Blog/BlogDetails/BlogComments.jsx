@@ -3,7 +3,7 @@ import { useState } from "react"
 export default function BlogComments({ id }) {
   const [blogComments, setBlogComments] = useState()
 
-  fetch(`http://localhost:5000/blogComment`)
+  fetch(`https://resort-server-delta.vercel.app/blogComment`)
     .then((res) => res.json())
     .then((data) => {
       const filterData = data.filter((d) => d.commentToken === id)

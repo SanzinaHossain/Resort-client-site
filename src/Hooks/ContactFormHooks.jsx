@@ -7,7 +7,7 @@ const handleContactInfo = (e) => {
   const contactInfo = { name, contact, email, message }
   console.log(contactInfo)
 
-  fetch("http://localhost:5000/userContacts", {
+  fetch("https://resort-server-delta.vercel.app/userContacts", {
     method: "POST",
     headers: {
       "content-type": "application/json",

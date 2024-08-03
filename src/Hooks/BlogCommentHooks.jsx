@@ -13,7 +13,7 @@ const handleBlogComment = (e, commentToken) => {
     commentToken,
   }
 
-  fetch("http://localhost:5000/blogComments", {
+  fetch("https://resort-server-delta.vercel.app/blogComments", {
     method: "POST",
     headers: {
       "content-type": "application/json",
