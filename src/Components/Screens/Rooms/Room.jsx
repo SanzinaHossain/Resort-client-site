@@ -3,14 +3,7 @@ import coverImage from "../../../assets/background3.avif"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 import Loading from "../../Molecules/Loading"
-import {
-  FaBath,
-  FaBed,
-  FaParking,
-  FaSwimmingPool,
-  FaUserFriends,
-  FaWifi,
-} from "react-icons/fa"
+import RoomExtraFacility from "./RoomExtraFacility"
 
 export default function Room() {
   const navigate = useNavigate()
@@ -42,20 +35,7 @@ export default function Room() {
               <h1 className="text-lg text-black text-center my-3">
                 {room.description}
               </h1>
-              <div className="flex items-center my-2 lg:gap-x-5 gap-x-2">
-                <p className="flex gap-x-2 items-center text-black">
-                  <FaUserFriends className="text-primary text-xl" />
-                  {room.guest} Guest
-                </p>
-                <p className="flex gap-x-2 items-center text-black">
-                  <FaBed className="text-primary text-xl" />
-                  {room.bed} Bed
-                </p>
-                <p className="flex gap-x-2 items-center text-black">
-                  <FaBath className="text-primary text-xl" />
-                  {room.bath} Bath
-                </p>
-              </div>
+              <RoomExtraFacility room={room} />
               <button
                 onClick={() => navigate(`/roomDetails/${room._id}`)}
                 className="border-2 border-secondary p-2 my-3 text-black hover:bg-secondary hover:text-white hover:font-bold"
