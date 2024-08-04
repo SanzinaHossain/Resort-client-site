@@ -29,7 +29,7 @@ export default function UserProfile() {
         image={coverImage}
       />
       <div className="p-10 flex flex-col justify-center items-center ">
-        <div className=" text-black text-xl w-[500px] border-2 p-5">
+        <div className=" text-black text-xl lg:w-[500px] border-2 p-5 w-[90vw]">
           <div className="flex justify-center items-center flex-col">
             <PiUsersFill className="text-7xl text-primary" />
             <h1> {userData?.name}</h1>
